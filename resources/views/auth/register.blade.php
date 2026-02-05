@@ -39,7 +39,8 @@
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
         <div class="mt-4">
-            <label for="role_id">Role</label>
+            <x-input-label for="role_id" :value="__('Role')" />
+
             <select name="role_id" required class="block mt-1 w-full">
                 @foreach ($roles as $role)
                     <option value="{{ $role->id }}">{{ $role->name }}</option>
