@@ -1,0 +1,4 @@
+user_code,name,user_name,password,delete_flg,is_active
+USER_01,MMNO,MMNO,mmno@123,0,1
+USER_02,PPN,Pwint,pwint@123,0,0
+USER_03,LIAM,LIAM,liam@123,0,0
