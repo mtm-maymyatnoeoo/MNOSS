@@ -16,7 +16,8 @@ class UserSeeder extends Seeder
         // PostgreSQL-safe truncate
         DB::statement('TRUNCATE TABLE user_infos RESTART IDENTITY CASCADE');
 
-        $filePath = storage_path('app/seeders/'.'userInfo.csv');
+        $filePath = database_path('seeders/seed_files/user.csv');
+
 
         if (!file_exists($filePath)) {
             $this->command->error('UserInfo.csv not found');

@@ -13,7 +13,8 @@ class DivisionSeeder extends Seeder
         // PostgreSQL-safe truncate
         DB::statement('TRUNCATE TABLE division RESTART IDENTITY CASCADE');
 
-        $filePath = storage_path('app/seeders/'.'division.csv');
+        $filePath = database_path('seeders/seed_files/division.csv');
+
 
         if (!file_exists($filePath)) {
             $this->command->error('Division.csv not found');

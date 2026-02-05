@@ -16,7 +16,8 @@ class FeatureSeeder extends Seeder
                 // PostgreSQL-safe truncate
         DB::statement('TRUNCATE TABLE feature RESTART IDENTITY CASCADE');
 
-        $filePath = storage_path('app/seeders/'.'feature.csv');
+        $filePath = database_path('seeders/seed_files/feature.csv');
+
 
         if (!file_exists($filePath)) {
             $this->command->error('Feature.csv not found');

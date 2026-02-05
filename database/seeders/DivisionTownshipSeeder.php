@@ -16,7 +16,8 @@ class DivisionTownshipSeeder extends Seeder
                 // PostgreSQL-safe truncate
         DB::statement('TRUNCATE TABLE division_township RESTART IDENTITY CASCADE');
 
-        $filePath = storage_path('app/seeders/'.'divisionTownship.csv');
+        $filePath = database_path('seeders/seed_files/divisionTownship.csv');
+
 
         if (!file_exists($filePath)) {
             $this->command->error('DivisionTownship.csv not found');

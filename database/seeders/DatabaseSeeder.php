@@ -17,7 +17,9 @@ class DatabaseSeeder extends Seeder
     {
         info('Database seeding started.');
         $seeders = [
-            'userInfo' => ['class' => UserSeeder::class, 'table' => 'user_infos'],
+            'userRole' => ['class' => UserRoleSeeder::class, 'table' => 'user_role'],
+
+            // 'user' => ['class' => UserSeeder::class, 'table' => 'users'],
             'division' => ['class' => DivisionSeeder::class, 'table' => 'division'],
             'divisionTownship' => ['class' => DivisionTownshipSeeder::class, 'table' => 'division_township'],
             // 'Feature' => ['class' => FeatureSeeder::class, 'table' => 'feature'],
@@ -25,7 +27,7 @@ class DatabaseSeeder extends Seeder
         ];
 
         Schema::disableForeignKeyConstraints();
-        $path = storage_path('app/seeders');
+        $path = database_path('seeders/seed_files');
 
         $files = File::files($path);
 
